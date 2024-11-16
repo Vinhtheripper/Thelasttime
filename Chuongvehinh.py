@@ -4,8 +4,8 @@ print('Bấm chọn màu để chọn màu cụ thể')
 def xoacu():
     canvas.delete('line')
 window= Tk()
-Button(window(),text=delete,command=xoacu).pack()
-canvas=Canvas(window,height=500,weight=750,bg='white')
+Button(window,text='delete',command=xoacu).pack()
+canvas=Canvas(window,height=500,width=750,bg='white')
 canvas.pack()
 lastX,lastY=0,0
 color='black'
@@ -30,15 +30,15 @@ def setred(event):
     colour ='red'
 def setblue(event):
     global colour
-    colour ='red'
+    colour ='blue'
 def setblack(event):
     global colour
-    colour ='red'
+    colour ='black'
 def setwhite(event):
     global colour
-    colour ='red'
+    colour ='white'
 canvas.tag_bind(red_id,'<Button-1>',setred)
-canvas.tag_bind(red_id,'<Button-1>',setblue)
-canvas.tag_bind(red_id,'<Button-1>',setblack)
-canvas.tag_bind(red_id,'<Button-1>',setwhite)
+canvas.tag_bind(blue_id,'<Button-1>',setblue)
+canvas.tag_bind(black_id,'<Button-1>',setblack)
+canvas.tag_bind(white_id,'<Button-1>',setwhite)
 window.mainloop()
